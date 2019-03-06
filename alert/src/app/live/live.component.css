@@ -1,0 +1,22 @@
+.main {
+  max-height: 650px;
+}
+.logs {
+  max-height: 650px;
+}
+.scroll{
+  min-height: 550px;
+  max-height: 550px;
+  overflow:scroll;
+}
+.logtitle{
+  height:100px;
+  font-family: 'Oswald', sans-serif;
+}
+.logtitle h1{
+  font-size: 3rem;
+  margin-top:20px;
+}
+.row{
+  margin:0px;
+}
