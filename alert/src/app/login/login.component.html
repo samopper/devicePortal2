@@ -1,2 +1,7 @@
-<h2>Click the button to get started</h2>
-<a routerLink="/live"><button (click)="login()"> Start </button></a>
+<div class="container">
+    <form class="form-signin">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <a routerLink="/live"><button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()" >Sign in</button></a>
+      </form>
+</div>

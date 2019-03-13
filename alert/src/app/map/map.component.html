@@ -1,3 +1,5 @@
 <agm-map [latitude]="latitude" [longitude]="longitude">
-  <agm-marker *ngFor="let fall of falls" [latitude]="fall.latitude" [longitude]="fall.longitude"></agm-marker>
-</agm-map>  
+  <agm-marker [latitude]="latitude" [longitude]="longitude">
+    <agm-info-window>{{status}}</agm-info-window>
+  </agm-marker>
+</agm-map>

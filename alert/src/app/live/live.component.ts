@@ -8,50 +8,7 @@ import { AlertsService} from '../alerts.service';
 })
 export class LiveComponent implements OnInit {
   alerts = {};
-  logs = [
-    {            
-      userID: "5c6f662b1c9d44000076556a",
-      date: Date.now(),
-      status: "-",
-      latitude: 41.24734,
-      longitude: -72.88653,
-      accuracy: 5
-    },
-    {            
-      userID: "5c6f662b1c9d44000076556a",
-      date: Date.now(),
-      status: "Hello",
-      latitude: 41.24734,
-      longitude: -72.88653,
-      accuracy: 5
-    },
-    {            
-      userID: "5c6f662b1c9d44000076556a",
-      date: Date.now(),
-      status: "World",
-      latitude: 41.24734,
-      longitude: -72.88653,
-      accuracy: 5
-    },
-    {            
-      userID: "5c6f662b1c9d44000076556a",
-      date: Date.now(),
-      status: "World",
-      latitude: 41.24734,
-      longitude: -72.88653,
-      accuracy: 5
-    },
-    {            
-      userID: "5c6f662b1c9d44000076556a",
-      date: Date.now(),
-      status: "World",
-      latitude: 41.24734,
-      longitude: -72.88653,
-      accuracy: 5
-    }
-  ]
   
-
   constructor(private alertService: AlertsService) { 
 
   }
