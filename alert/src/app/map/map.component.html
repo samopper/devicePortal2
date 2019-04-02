@@ -1,5 +1,7 @@
 <agm-map [latitude]="latitude" [longitude]="longitude">
-  <agm-marker [latitude]="latitude" [longitude]="longitude">
-    <agm-info-window>{{status}}</agm-info-window>
-  </agm-marker>
+    <div *ngFor="let alert of alerts.slice().reverse()">
+      <agm-marker [latitude]="alert.latitude" [longitude]="alert.longitude">
+        <agm-info-window>{{alert.status}}</agm-info-window>
+      </agm-marker>
+  </div>
 </agm-map>

@@ -31,7 +31,7 @@ export class AlertsService {
     this.http.get<any>('http://api.safetydevice.net/api/alerts').subscribe((res:Response) => {
       this.dataStore.reports = res;
       this._reports.next(Object.assign({}, this.dataStore).reports);
-    }, error => console.log('error could not load reports from api'));
+    }, error => console.log('error could not load reports from api: ', error));
   }
 
   get alerts() {
