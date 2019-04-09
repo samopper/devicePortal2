@@ -15,7 +15,7 @@ export class AlertsService {
   };
 
   constructor(private http:HttpClient) { 
-    this.socket = io('http://socket.safetydevice.net');
+    this.socket = io('https://socket.safetydevice.net');
     this.socket.on('connect', ()=>{console.log('connected to live alert server')});
     this.socket.on('alert', (data)=>{
       this.dataStore.reports.push(data);
@@ -28,7 +28,7 @@ export class AlertsService {
   }
 
   loadAlerts(){
-    this.http.get<any>('http://api.safetydevice.net/api/alerts').subscribe((res:Response) => {
+    this.http.get<any>('https://api.safetydevice.net/api/alerts').subscribe((res:Response) => {
       this.dataStore.reports = res;
       this._reports.next(Object.assign({}, this.dataStore).reports);
     }, error => console.log('error could not load reports from api: ', error));
