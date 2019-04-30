@@ -1,11 +1,12 @@
 <div class = "logbox" >
-  <div class="heading">
-      {{log.status}}
+    
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <p> UserID: {{log.userID}}</p>
+            <p>Status : {{log.status}}</p>
+            <p>Date: {{log.date}}</p>
+          </div>
+    </div>
   </div>
-  <hr> 
-  <p>UserID : {{log.userID}}</p>
-  <p>Date: {{log.date}}</p>
-  <p>Longitude: {{log.longitude}}</p>
-  <p>Latitude: {{log.latitude}}</p>
-  <p>Accuracy: {{log.accuracy}}</p>
 </div>

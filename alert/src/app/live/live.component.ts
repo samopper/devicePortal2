@@ -8,7 +8,11 @@ import { AlertsService} from '../alerts.service';
 })
 export class LiveComponent implements OnInit {
   alerts = {};
-  
+  selectedAlert = {
+    latitude:40.730610,
+    longitude:-73.935242,
+    null: true
+  };
   constructor(private alertService: AlertsService) { 
 
   }
@@ -17,6 +21,10 @@ export class LiveComponent implements OnInit {
     this.alertService.alerts.subscribe(alerts => {
       this.alerts = alerts;
     })
+  }
+
+  selectAlert(alert){
+    this.selectedAlert = alert;
   }
 
 }

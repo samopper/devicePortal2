@@ -1,7 +1,5 @@
-<agm-map [latitude]="latitude" [longitude]="longitude">
-    <div *ngFor="let alert of alerts.slice().reverse()">
-      <agm-marker [latitude]="alert.latitude" [longitude]="alert.longitude">
-        <agm-info-window>{{alert.status}}</agm-info-window>
+<agm-map [zoom] = "15" [latitude]="selectedAlert.latitude" [longitude]="selectedAlert.longitude">
+      <agm-marker *ngIf="!selectedAlert.null" [latitude]="selectedAlert.latitude" [longitude]="selectedAlert.longitude">
+        <agm-info-window *ngIf="!selectedAlert.null">{{selectedAlert.status}}</agm-info-window>
       </agm-marker>
-  </div>
 </agm-map>

@@ -1,21 +1,17 @@
-<div class="container-fluid">
-  <div class="row main">
-    <div class="col-md-6 map p-0">
-        <app-map></app-map>
+<div class="container-fluid p-0">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 p-0 main">
+          <app-map [selectedAlert] = "selectedAlert"></app-map>
     </div>
-    <div class="col-md-6 logs p-0">
-      <div class="container p-0">
-          <div class="row logtitle p-0">
-            <div class="col p-0">
-              <h1>Live Alert Feed</h1>
-            </div>
-          </div>
-          <div class="row p-0 scroll">
-            <div class="col p-0 scroll">
-                <div *ngFor="let alert of alerts.slice().reverse()">
-                    <app-log [log] = "alert"></app-log>
-                </div>
-            </div>
+    <div class="col-4 p-0 ">
+      <div class="row selected">
+          <b><p>ID: {{selectedAlert.userID}}</p>
+          <p>Status: {{selectedAlert.status}}</p>
+          <p>Date: {{selectedAlert.date}}</p></b>
+      </div>
+      <div class="row scroll">
+        <div class="log" *ngFor="let alert of alerts.slice().reverse()">
+            <app-log (click)="selectAlert(alert)" [log] = "alert"></app-log>
           </div>
       </div>
     </div>

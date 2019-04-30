@@ -7,7 +7,5 @@ hr {
 }
 .logbox {
   margin: 0px;
-}
-.heading {
-  color: #016fb9;
+  border-top: 1px solid black;
 }
